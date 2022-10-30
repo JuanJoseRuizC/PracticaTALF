@@ -1,0 +1,64 @@
+\documentclass{article}
+% pre\'ambulo
+
+\usepackage{graphicx}
+
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,activeacute]{babel}
+\usepackage{mathtools}
+
+\title{Práctica 2}
+\author{Juan José Ruiz Cañizal}
+
+\begin{document}
+% cuerpo del documento
+
+\maketitle
+\section{Ejercicio 1}
+El automata {a, b} es un automata finito determinista, tiene un n´umero finito de estados internos. El
+comportamiento viene determinado exclusivamente por el estado actua y las futuras entradas. En el
+automata desde cada nodo deben partir tantas flechas como le lleguen al estado. Definimos el automata
+como $ M = (K, \Sigma, \delta, S , F)$ :\\
+\begin{itemize}
+\item $K = \{q0, q1, q2\}$ 
+\item $\Sigma$ = \{a, b\} 
+\item $\delta$ = (qo, a, q1)
+\item $\delta$  = (qo, a) → q1
+\item $\delta$ = (qo, b) → q2
+\item $\delta$ = (q1, a) → q2
+\item $\delta$ = (q1, b) → q2
+\item S = q0
+\item F = q1
+\end{itemize}
+
+\section{Ejercicio 2}
+Primero abriremos "JFLAP" y pulsamos en "finite automaton"\\
+\includegraphics[width=0.35\linewidth]{2.1.png}\\
+Seguido de esto, construiremos el automata a partir de las herramientas que nos aporta el programa.\\
+\includegraphics[width=0.8\linewidth]{2.png}\\\\\\\\\\\\\\\
+Para terminar, usaremos la opcion de "multiple run" para ver si acepta adecuadamente cada cadena.\\
+\includegraphics[width=1.5\linewidth]{1B.png}\\
+\clearpage
+\section{Ejercicio 3}
+Abrimos en archivo fa.m en Octave, el comportamiento del automata como podemos observar usando
+el comando help fa.m se definde de la siguiente manera:
+\begin{verbatim}
+    {
+    "name" : "a*",
+    "representation" : {
+      "K" : ["q0", "q1", "q2"],
+      "A" : ["a", "b"],
+      "s" : "q0",
+      "F" : ["q1"],
+      "t" : [["q0", "a", "q1"],
+             ["q0", "b", "q2"],
+             ["q1", "a", "q2"],
+             ["q1", "b", "q2"],
+             ["q2", "a", "q2"],
+             ["q2", "b", "q2"],
+      }
+}
+    
+\end{verbatim}
+\end{document}
