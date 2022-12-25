@@ -1,0 +1,59 @@
+\documentclass{article}
+% pre\'ambulo
+
+\usepackage{graphicx}
+
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,activeacute]{babel}
+\usepackage{mathtools}
+\usepackage{whilecode2}
+\title{Práctica 2}
+\author{Juan José Ruiz Cañizal}
+
+\begin{document}
+\maketitle
+
+
+\section{Ejercicio 1}
+Entramos en "Jflap" y pulsamos en "Turing Machine"\\
+\\
+\includegraphics[width=0.35\linewidth]{2.1.png}\\
+A continuación, gracias a las herramientas proporcionadas por el programa, desarrollamos el automata.\\
+\includegraphics[width=1\linewidth]{3.1.png}\\
+
+
+\section{Ejercicio 2}
+La ecuación  solicitada en el ejercicio anterior es la suma de 3 números, expresados de la siguiente forma:
+$ <\ <(\pi^1_1) | \sigma(\pi^3_3)> | \sigma(\pi^4_4)> $\\
+\newline
+De forma que evaluando la función para los valores 2,3,4 devuelve 9:\\
+\newline
+\includegraphics[width=0.65\linewidth]{3.2.png}\\
+
+\pagebreak 
+\section{Ejercicio 3}
+El codigo while que implementa 3 numeros y los suma es :
+
+\begin{whilecode} [h]
+\HeaderComment{\textnormal{$Q= (1, s)$\\}}
+\HeaderComment{\textnormal{s:\\
+\DefaultVar{1}\Assig\DefaultVar{1};\\
+\DefaultVar{2}\Assig\DefaultVar{2};\\
+\DefaultVar{3}\Assig\DefaultVar{3};\\
+}}
+
+
+\While{$G(X_2) \not = 0$}{
+\While{$G(X_3) \not = 0$}{
+  $X_2 \Assig X_2 + 1$\;
+  $X_3 \Assig X_3 - 1$\;
+ }
+  $X_1 \Assig X_1 + 1$\;
+  $X_2 \Assig X_2 - 1$\;
+ }
+
+ \DefaultVar{1}\Assig\DefaultVar{1};
+\end{whilecode}
+
+\end{document}
