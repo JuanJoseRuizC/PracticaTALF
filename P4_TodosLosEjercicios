@@ -1,0 +1,58 @@
+\documentclass{article}
+% preambulo
+
+\usepackage{graphicx}
+
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,activeacute]{babel}
+\usepackage{mathtools}
+\usepackage{whilecode2}
+\title{Práctica 4}
+\author{Juan José Ruiz Cañizal}
+
+\begin{document}
+\maketitle
+
+
+\section{Ejercicio 1}
+
+El programa WHILE más simple sin argumentos que calcula la función  divergencia:
+\\ 
+\includegraphics[width=0.35\linewidth]{4.1.1.png}\\
+es:\\
+\includegraphics[width=0.65\linewidth]{4.1.2.png}\\
+De forma que al desarrollarlo por partes obtenemos que:\\
+$\Gamma(sentence2N(X2:=X1+1),sentence2N(while X2!=0 do X1:=0 od)) - 1 = 10876$\\
+Ya que:\\
+$sentence2N(X2:=X1+1) + sentence2N(while X2!=0 do X1:=0 od)= 10877$\\
+
+\section{Ejercicio 2}
+\begin{verbatim}
+   function printvectors() 
+for i=0;
+while(i>=0)
+    disp([’(’ num2str(godeldecoding(i)) ’)’])
+    i=i+1;
+endwhile 
+end
+\end{verbatim}
+
+Esta función itera sobre num2str, que devuelve un codigo dado un numero, y golddecoding degodeliza los vectores, por tanto solo hay que iterar sobrer el vector de longitud N.\\
+\includegraphics[width=0.65\linewidth]{4.2.png}\\
+
+\section{Ejercicio 3}
+\begin{verbatim}
+ function   printwhile()
+for i=0;
+while (i>=0)
+    disp(N2WHILE(i))
+    i=i+1;
+endwhile
+end
+\end{verbatim}
+
+Este caso es muy parecido al ejercicio anterior, solo que ne vez de hacer la biyección de N a strings, esta vez necesitaremos un codigo que haga una biyección de N a WHILE.\\
+\includegraphics[width=0.65\linewidth]{4.3.png}\\
+
+\end{document}
